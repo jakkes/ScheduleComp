@@ -8,15 +8,25 @@
 	</head>
 	<body>
 		<div class="row">
-			<div class="col col-sm-6 col-sm-offset-3">
-				<form>
-					<div class="form-group">
-						<div class="input-group">
-							<input class="form-control" id="fileUploader" type="file" name="files" />
-							<input type="button" onclick="upload()" class="btn btn-primary form-control" value="Upload"/>
+			<div class="col col-md-6 col-md-offset-3">
+				<div class="jumbotron">
+					<div class="container">
+						<div class="row">
+							<div class="col col-md-10 col-md-offset-1">
+								<h1>Welcome</h1>
+								<p>Upload schedules to check for collisions.</p>
+								<form>
+									<div class="form-group col col-md-10 col-md-offset-1">
+										<div class="input-group col col-md-12">
+											<input class="form-control" id="fileUploader" type="file" name="files" />
+											<input type="button" onclick="upload()" class="btn btn-primary form-control" value="Upload"/>
+										</div>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
-				</form>
+				</div>
 			</div>
 		</div>
 	</body>
