@@ -4,9 +4,20 @@
 	<head>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		
+		<script type="text/javascript" src="js/site.js"></script>
 	</head>
 	<body>
-		<input type="file" id="input">
+		<div class="row">
+			<div class="col col-sm-6 col-sm-offset-3">
+				<form>
+					<div class="form-group">
+						<div class="input-group">
+							<input class="form-control" id="fileUploader" type="file" name="files" />
+							<input type="button" onclick="upload()" class="btn btn-primary form-control" value="Upload"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
