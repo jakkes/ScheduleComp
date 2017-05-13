@@ -6,8 +6,15 @@ function upload(){
 
     var reader = new FileReader();
     reader.onloadend = function(e){
-        console.log(e);
+        parseToEvents(e.currentTarget.result);
     }
-    reader.readAsText(files[0]);
+    for(let i = 0; i < files.length; i++)
+        reader.readAsText(files[0]);
 
+}
+
+function parseToEvents(string){
+    const lines = string.split("\n");
+    let events = new Array();
+    
 }
