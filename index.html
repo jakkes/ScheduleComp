@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<script type="text/javascript" src="js/site.js"></script>
@@ -16,11 +17,9 @@
 								<h1>Welcome</h1>
 								<p>Upload schedules to check for collisions.</p>
 								<form>
-									<div class="form-group col col-md-10 col-md-offset-1">
-										<div class="input-group col col-md-12">
-											<input class="form-control" id="fileUploader" type="file" name="files" />
-											<input type="button" onclick="upload()" class="btn btn-primary form-control" value="Upload"/>
-										</div>
+									<div class="input-group col col-md-12">
+										<input class="form-control" id="fileUploader" type="file" name="files" />
+										<input type="button" onclick="upload()" class="btn btn-primary form-control" value="Upload"/>
 									</div>
 								</form>
 							</div>
