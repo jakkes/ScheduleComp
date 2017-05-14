@@ -16,5 +16,9 @@ function upload(){
 function parseToEvents(string){
     const lines = string.split("\n");
     let events = new Array();
-    
+    const regex = /BEGIN:VEVENT\\nDTSTART:()/
+}
+
+function checkEventStart(string){
+
 }
