@@ -3,6 +3,8 @@ String.prototype.replaceAll = function(search, replacement) {
     return target.replace(new RegExp(search, 'g'), replacement);
 };
 
+const parseFunctions = {BEGIN: eventStart};
+
 function upload(){
     const uploader = document.getElementById("fileUploader");
     const files = uploader.files;
@@ -17,12 +19,20 @@ function upload(){
 }
 
 function parseToEvents(string){
-    string = string.replaceAll("\n","");
+    const lines = string.split("\n");
     console.log(string);
     let events = new Array();
-    const regex = /BEGIN:VEVENT.*DTSTART:(.*)DTEND:(.*)UID:(.*)DTSTAMP:(.*)LAST-MODIFIED:(.*)URL:(.*)SUMMARY:(.*)LOCATION:(.*)DESCRIPTION:(.*)END:VEVENT/;
-    console.log(regex.exec(string));
+    let event = null;
+    for(var i = 0; i < lines.length; i++){
+        const line = lines[i];
+        if(event === null && eventStart === true)
+            event = {type: "event"};
+        else{
+
+        }    
+    }
 }
 
-function checkEventStart(string){
+function eventStart(string){
+    return /BEGIN:VEVENT/.exec(string) !== null;
 }
